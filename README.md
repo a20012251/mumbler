@@ -19,7 +19,7 @@ It scans all the zip files and calculates the frequency of each word in each fil
 count_word.py WORD
 ```
 
-It returns the number of times a WORD appears from the list of frequencies. It uses the precomputations to speed up the count. It doesn't read the zip files.
+It returns the number of times a WORD appears from the list of frequencies. It uses the precomputations to speed up the count. It does not read the zip files.
 
 ###get_word.py
 
@@ -36,3 +36,8 @@ mumbler.sh WORD LENGTH
 ```
 
 It produces a random mumbler list starting with the word WORD and with length LENGTH. It uses ssh to call the other servers to leverage locality.
+
+###File Structure
+
+The zip files are located in /gpfs/gpfsfpo/gpfsX/ where X is 1, 2 or 3. Similarly, the precomputations are located in /gpfs/gpfsfpo/gpfsX_counts/.
+Each file was generated from its corresponding machine to improve network access.
