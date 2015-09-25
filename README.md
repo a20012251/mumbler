@@ -12,6 +12,7 @@ It contain the common code for the rest of the scripts. Mainly file and naming h
 ###precompute_files.py
 
 It scans all the zip files and calculates the frequency of each word in each file and produces some files with this information.
+It was run using a detached screen because it takes 7 hours in each box in total.
 
 ###count_word.py
 
@@ -36,6 +37,7 @@ mumbler.sh WORD LENGTH
 ```
 
 It produces a random mumbler list starting with the word WORD and with length LENGTH. It uses ssh to call the other servers to leverage locality.
+Each next word is found it at most 2 minutes, which happens when the WORD is at the end of its zip file.
 
 ###File Structure
 
