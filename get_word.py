@@ -1,18 +1,15 @@
 #! /usr/bin/python
-import zipfile
 import server
 import sys
 import random
 import count_word
 
 def word_from_file(file_name, word, index):
-    z = zipfile.ZipFile(server.zip_file_path(file_name), 'r') 
-    internal_name = z.namelist()[0]
-    f = z.open(internal_name)
+    f = open(server.short_file_path(file_name), 'r')
     for line in f:
         tokens = line.split()
         if tokens[0] == word:
-            times = int(tokens[3])
+            times = int(tokens[2])
             if times >= index:
               return tokens[1]
             else:
