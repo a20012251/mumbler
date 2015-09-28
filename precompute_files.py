@@ -52,7 +52,6 @@ def preprocess_file(file_name):
 def create_big_map():
   for file_name in server.file_names():
     preprocess_file(file_name)
-    break
     
 def main():
   create_big_map()
