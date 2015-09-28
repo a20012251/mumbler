@@ -12,6 +12,8 @@ It contain the common code for the rest of the scripts. Mainly file and naming h
 ###precompute_files.py
 
 It scans all the zip files and calculates the frequency of each word in each file and produces some files with this information.
+It also creates a shorter version for every zip file. It collapses all the pairs that appear in
+different years in a single row and removes the columns that are not used. It reduces each zip file to a text file of around 50 MB.
 It was run using a detached screen because it takes 7 hours in each box in total.
 
 ###count_word.py
@@ -28,7 +30,7 @@ It returns the number of times a WORD appears from the list of frequencies. It u
 get_word.py WORD INDEX
 ```
 
-It returns the pair of the word WORD that, from the frequencies, would be in index INDEX. It uses *count_word.py* to speed up the counts and read only one zipfile.
+It returns the pair of the word WORD that, from the frequencies, would be in index INDEX. It uses *count_word.py* to speed up the counts and read only one shortened file.
 
 ###mumbler.sh
 
