@@ -39,7 +39,7 @@ mumbler.sh WORD LENGTH
 ```
 
 It produces a random mumbler list starting with the word WORD and with length LENGTH. It uses ssh to call the other servers to leverage locality.
-Each next word is found it at most 2 minutes, which happens when the WORD is at the end of its zip file.
+Each next word is found it at most 30 seconds, which happens when the WORD is at the end of its file.
 
 ###File Structure
 
